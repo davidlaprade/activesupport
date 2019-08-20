@@ -118,7 +118,7 @@ class Numeric
     end
   end
 
-  [Float, Fixnum, Bignum, BigDecimal].each do |klass|
+  [Integer, Float, BigDecimal].each do |klass|
     klass.send(:alias_method, :to_default_s, :to_s)
 
     klass.send(:define_method, :to_s) do |*args|
